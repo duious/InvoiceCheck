@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="base">#f36a1c</color>
+    <color name="head">#f9752b</color>
+    <color name="white">#fff</color>
+    <color name="grey">#969696</color>
+    <color name="line">#fbf6f0</color>
+
+
+    <!--zxing-->
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <!--zxing over-->
+</resources>

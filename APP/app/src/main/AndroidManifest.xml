@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools" package="com.sjxd.invoicecheck">
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--设备信息-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!--相机--><!--闪关灯-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 相册 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <!-- unavailable in API 23 -->
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <uses-feature android:name="android.hardware.camera.any"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+
+    <application android:allowBackup="true"
+                 android:icon="@drawable/icon"
+                 android:label="@string/app_name"
+                 android:roundIcon="@drawable/icon"
+                 android:supportsRtl="true"
+                 android:theme="@style/AppTheme"
+                 tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MainActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:alwaysRetainTaskState="true"
+                  android:label="@string/app_name"
+                  android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                        android:theme="@style/AppTheme.NoActionBar"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- 隐藏键盘 --><!-- 全屏 -->
+        <activity android:configChanges="orientation|keyboardHidden"
+                  android:name="com.sjxd.invoicecheck.util.zxing.CaptureActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/AppTheme"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <!-- FileProvider配置访问路径，适配7.0及其以上 -->
+        <provider android:name="android.support.v4.content.FileProvider"
+                  android:authorities="${applicationId}.provider"
+                  android:exported="false"
+                  android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                       android:resource="@xml/file_paths"/>
+        </provider>
+    </application>
+</manifest>

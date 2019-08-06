@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">发票查重</string>
+    <string name="app_full_name">发票查重工具</string>
+    <string name="host">https://222.128.15.93:8887/</string>
+
+    <string name="scan_qrcode">请将二维码放入框内</string>
+
+    <string name="button_ok">OK</string>
+    <string name="msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
+    <string name="msg_error">Error</string>
+    <string name="msg_invalid_value">Invalid value</string>
+</resources>
