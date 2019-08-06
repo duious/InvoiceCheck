@@ -15,9 +15,9 @@ import java.util.HashMap;
 public class UtilBaiDu {
     private static final String filePath = "F:/IdeaProjects/invoicecheckserver/target/";
     //设置APPID/AK/SK
-    private static final String APP_ID = "16931201";
-    private static final String API_KEY = "ORfGuD3jM2UTyaw9QuQaLgkE";
-    private static final String SECRET_KEY = "o9EUr1MbV7Y4ELgwrbfylWzs0H7b2I8d";
+    private static final String APP_ID = "换成你自己的";
+    private static final String API_KEY = "换成你自己的";
+    private static final String SECRET_KEY = "换成你自己的";
     private static AipOcr client;
 
     private UtilBaiDu() {
